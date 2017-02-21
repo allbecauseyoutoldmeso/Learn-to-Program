@@ -49,6 +49,8 @@ end
 
 end
 
+commands = ['walk', 'hug', 'feed']
+
 sally = Puppy.new "Sally"
 counter = 0
 
@@ -56,7 +58,7 @@ counter = 0
 puts "What do you want to do?  Walk Sally, hug Sally, or feed Sally?"
 answer = gets.chomp.downcase
 
-if answer == 'walk' || answer == 'hug' || answer == 'feed'
+if commands.include? answer 
 sally.send(answer)
 else
   puts "You can't do that!"

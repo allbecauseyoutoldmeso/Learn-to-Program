@@ -46,14 +46,16 @@ else
 
 end
 
+commands = ['grow', 'age', 'pick', 'type', 'fruit', 'height']
+
 apple = Tree.new("apple")
 
 while $height < 36
 
-puts "What do you want to do?"
+puts "What do you want to do?  Commands are grow, age, pick, type, fruit and height."
 input = gets.chomp
 
-if input == 'grow' || input == 'age' || input == 'height' || input == 'pick' || input == 'type' || input == 'fruit'
+if commands.include? input
 apple.send(input)
 else
   puts "I don't understand."

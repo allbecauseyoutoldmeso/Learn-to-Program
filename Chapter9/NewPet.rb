@@ -92,6 +92,7 @@ class Kitten
 
 end
 
+commands = ['eat', 'nap', 'play', 'cuddle']
 
 puts "You adopt a kitten.  What's her name?"
 newname = gets.chomp
@@ -100,7 +101,7 @@ snufkin = Kitten.new newname
 10.times do
 puts "What do you want to do?"
 command = gets.chomp.downcase
-if command == 'eat' || command == 'nap' || command == 'play'  || command == 'cuddle'
+if commands.include? command 
 snufkin.send(command)
 else
   puts "Sorry, what?  Maybe you don't speak cat.  #{newname} can eat, nap, play or cuddle."
