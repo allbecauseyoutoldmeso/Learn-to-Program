@@ -18,3 +18,22 @@ log 'Monkeys' do
   end
   'peanuts'
 end
+
+puts "\n...OR...\n\n"
+
+
+log 'Monkeys' do
+  log 'Marmosets' do
+    log 'Tiggers' do
+      'thistles'
+    end
+    'marmalade'
+  end
+  log 'Bah!' do
+    log 'Humbug!' do
+      'Humbug!'
+    end
+    'Bah!'
+  end
+  'peanuts'
+end
